@@ -10,6 +10,9 @@ var app = http.createServer(function(req, res) {
   fileServer.serve(req, res);
 }).listen(8080);
 
+// app.use('/css', express.static('css'))
+// app.use('/js', express.static('js'))
+
 var io = socketIO.listen(app);
 io.sockets.on('connection', function(socket) {
 
